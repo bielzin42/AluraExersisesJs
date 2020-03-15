@@ -1,49 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Site.</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <h1>Biel's Recipes</h1>
 
     <script>
+      var ingredientes = [];
 
-        var ingredientes = [];
+      var quantidade = parseInt(
+        prompt("Quantos ingredientes você vai adicionar?")
+      );
 
-        var quantidade = parseInt(prompt("Quantos ingredientes você vai adicionar?"));
+      var contador = 1;
 
-        var contador = 1;
+      while (contador <= quantidade) {
+        var ingrediente = prompt("Informe o ingrediente " + contador);
 
-        while( contador <= quantidade) {
+        var exist = false;
 
-            var ingrediente = prompt("Informe o ingrediente " + contador);
-
-            var exist = false;
-
-            for(var pos = 0; pos < ingredientes.length; pos++)
-            {
-                if ( ingredientes[pos] == ingrediente)
-                {
-                    exist = true;
-                    break
-                }
-            }
-
-            if (exist == false) 
-            {
-                ingredientes.push(ingrediente);
-                contador++;
-            }
-            
+        for (var pos = 0; pos < ingredientes.length; pos++) {
+          if (ingredientes[pos] == ingrediente) {
+            exist = true;
+            break;
+          }
         }
 
-        console.log(ingredientes);
-        
+        if (exist == false) {
+          ingredientes.push(ingrediente);
+          contador++;
+        }
+      }
 
+      console.log(ingredientes);
     </script>
-    
-</body>
+  </body>
 </html>
