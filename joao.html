@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Curso Javascript</title>
+    <style>
+      #button {
+        padding: 0.25%;
+      }
+
+      .box {
+        margin-top: 1em;
+      }
+
+      #app {
+        width: 100%;
+        height: auto;
+      }
+      article {
+        width: 7em;
+        height: 6.25em;
+        background-color: #f00;
+        margin-top: 0.25em;
+        float: left;
+        margin-left: 0.25em;
+      }
+
+      /* mouse em cima hoover nome da div:hoover */
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div>
+        <button id="button" onclick="createSquare()">criar quadrado</button>
+        <div class="box">
+          <div id="caixa"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      //   var boxElement = document.getElementById("caixa");
+      //   boxElement.style.width = "7em";
+      //   boxElement.style.height = "6.25em";
+      //   boxElement.style.backgroundColor = "#f00";
+
+      function createSquare() {
+        var pai = document.getElementById("caixa");
+        var filho = document.createElement("article");
+        filho.textContent = "qqq";
+        pai.appendChild(filho);
+      }
+    </script>
+  </body>
+</html>
